@@ -2,7 +2,17 @@ import { useEffect, useState } from "react";
 import React from "react";
 
 function Navbar() {
-  const [links, setLinks] = useState(["Home", "Products", "About"]);
+  const [links, setLinks] = useState([
+    {
+    page : "Home",
+    url : "/"
+  },{
+    page : "Products",
+    url : "/products"
+  },{
+    page : "About us",
+    url : "/about"
+  }]);
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -32,9 +42,9 @@ function Navbar() {
                   <li key={link}>
                     <a
                       className="text-black font-medium hover:opacity-[0.7] hover:text-[#F43A09]"
-                      href={`/${link}`}
+                      href={`${link.url}`}
                     >
-                      {link}
+                      {link.page}
                     </a>
                   </li>
                 );

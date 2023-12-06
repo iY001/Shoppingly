@@ -4,7 +4,7 @@ function ProductCard() {
   return (
     <>
 
-      <div className='bg-[#f43c09a7] md:w-[280px] w-[240px] mx-2 my-8 shadow-lg md:m-10 md:rounded-lg md:mx-12 '>
+      <div className='bg-[#f43c09a7] md:w-[280px] mx-6 my-6 w-[240px] shadow-lg md:m-10 md:rounded-lg md:mx-12 '>
         <img src={prod1} alt="" />
         <section className='bg-white w-full p-4'>
 

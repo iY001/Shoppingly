@@ -1,0 +1,3 @@
+Main Color -> #F43A09
+Secondary Color -> #e8f9fd
+Dark Mode Color -> #3d4142

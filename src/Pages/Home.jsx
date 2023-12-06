@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../Components/Navbar'
 import Sales from '../Components/Sales'
 import TopSelling from '../Components/TopSelling'
+import Footer from '../Components/Footer'
 
 function Home() {
   return (
@@ -9,6 +10,7 @@ function Home() {
     <Navbar/>
     <Sales/>
     <TopSelling/>
+    <Footer/>
     </>
   )
 }

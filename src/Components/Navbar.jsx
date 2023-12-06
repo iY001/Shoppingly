@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import React from "react";
 
 function Navbar() {
+  const [open, setOpen] = useState(false);
   const [links, setLinks] = useState([
     {
     page : "Home",
@@ -11,9 +12,8 @@ function Navbar() {
     url : "/products"
   },{
     page : "About us",
-    url : "/about"
+    url : "/aboutus"
   }]);
-  const [open, setOpen] = useState(false);
   return (
     <>
       <div className="relative z-10 md:bg-white bg-[#F4F4F4]">
@@ -32,7 +32,7 @@ function Navbar() {
               ></ion-icon>
             </span>
             <ul
-              className={`flex flex-col md:flex-row bg-[#F4F4F4] md:bg-white items-center text-[1.1rem] gap-[2em] md:flex md:items-center md:px-4 z-[-1] md:z-auto absolute md:static 
+              className={`flex flex-col md:flex-row bg-[#F4F4F4] md:bg-white items-center text-[1.1rem] gap-[2em] md:flex md:items-center md:px-4 z-[-20] md:z-auto absolute md:static 
          w-full md:w-auto left-0 py-6 md:py-0 pl-7 md:pl-0 opacity-0 md:opacity-100
         top-[-400px] transition-all ease-in duration-500 ${open ? "top-[60px] opacity-100" : "top-[-80px] opacity-0"
                 } `}

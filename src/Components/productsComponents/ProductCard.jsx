@@ -30,7 +30,7 @@ function ProductCard(props) {
           <p className='md:text-2xl md:font-bold'>$774.00</p>
         </section>
         <section className='md:py-5 md:flex md:justify-end'>
-          <button className='bg-white md:w-auto w-full text-[#f43c09a7]  shadow-lg hover:text-[#f43a09] py-2 px-6 md:mx-4 text-lg font-bold'>ADD TO CART</button>
+          <button className='bg-white md:w-auto w-full text-[#f43c09a7] border-t-2 border-t-gray-200 drop-shadow-md hover:text-[#f43a09] py-2 px-6 md:mx-4 text-lg font-bold'>ADD TO CART</button>
         </section>
       </Link>
     </>

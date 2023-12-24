@@ -1,0 +1,33 @@
+{
+    "products": [
+      {
+        "category": "Electronics",
+        "title": "Wireless Bluetooth Earbuds",
+        "description": "High-quality wireless earbuds with noise cancellation and long battery life.",
+        "price": 49.99,
+        "rate": 4.5 
+      },
+      {
+        "category": "Home & Kitchen",
+        "title": "Stainless Steel Cookware Set",
+        "description": "Durable set of stainless steel pots and pans for all your cooking needs.",
+        "price": 89.95,
+        "rate": 4.8
+      },
+      {
+        "category": "Clothing",
+        "title": "Men's Classic Fit Dress Shirt",
+        "description": "Elegant and comfortable dress shirt suitable for formal occasions.",
+        "price": 34.99,
+        "rate": 4.7
+      },
+      {
+        "category": "Health & Wellness",
+        "title": "Fitness Tracker Smartwatch",
+        "description": "Track your fitness activities with this smartwatch featuring heart rate monitoring and GPS.",
+        "price": 79.99,
+        "rate": 4.6
+      }
+    ]
+  }
+  

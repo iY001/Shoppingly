@@ -1,33 +1,58 @@
 {
-    "products": [
-      {
-        "category": "Electronics",
-        "title": "Wireless Bluetooth Earbuds",
-        "description": "High-quality wireless earbuds with noise cancellation and long battery life.",
-        "price": 49.99,
-        "rate": 4.5 
-      },
-      {
-        "category": "Home & Kitchen",
-        "title": "Stainless Steel Cookware Set",
-        "description": "Durable set of stainless steel pots and pans for all your cooking needs.",
-        "price": 89.95,
-        "rate": 4.8
-      },
-      {
-        "category": "Clothing",
-        "title": "Men's Classic Fit Dress Shirt",
-        "description": "Elegant and comfortable dress shirt suitable for formal occasions.",
-        "price": 34.99,
-        "rate": 4.7
-      },
-      {
-        "category": "Health & Wellness",
-        "title": "Fitness Tracker Smartwatch",
-        "description": "Track your fitness activities with this smartwatch featuring heart rate monitoring and GPS.",
-        "price": 79.99,
-        "rate": 4.6
-      }
-    ]
-  }
-  
+  "products": [
+    {
+      "category": "Electronics",
+      "title": "Wireless Bluetooth Earbuds",
+      "description": "High-quality wireless earbuds with noise cancellation and long battery life.",
+      "price": 49.99,
+      "rate": 4.5
+    },
+    {
+      "category": "Home & Kitchen",
+      "title": "Stainless Steel Cookware Set",
+      "description": "Durable set of stainless steel pots and pans for all your cooking needs.",
+      "price": 89.95,
+      "rate": 4.8
+    },
+    {
+      "category": "Clothing",
+      "title": "Men's Classic Fit Dress Shirt",
+      "description": "Elegant and comfortable dress shirt suitable for formal occasions.",
+      "price": 34.99,
+      "rate": 4.7
+    },
+    {
+      "category": "Health & Wellness",
+      "title": "Fitness Tracker Smartwatch",
+      "description": "Track your fitness activities with this smartwatch featuring heart rate monitoring and GPS.",
+      "price": 79.99,
+      "rate": 4.6
+    }
+  ]
+}
+
+
+
+{
+  "Products": [
+    {
+      "cat_name": "Electronics",
+      "prod_name": "ASUS TUF GAMING F15",
+      "prod_img": "1.png",
+      "price": 699.99,
+      "rate": 4, // 4 STARS OUT OF 5
+      "description": "Description for Product 1",
+      "state": "Available",
+    },
+    {
+      "cat_name": "Clothing",
+      "prod_name": "Legendary Whitetails Men's Non-Typical Long Sleeve T-Shirt",
+      "prod_img": "2.png",
+      "price": 19.99,
+      "rate": 26.13, // 4 STARS OUT OF 5
+      "description": "Legendary Whitetails Men's Non-Typical Long Sleeve T-Shirt, eliminates scratching,Double needle stitching,Screen printed sleeves and left chest design,Extended tail and side vents,Big Game Camo collar and side vent taping",
+      "state": "Available",
+    },
+
+  ]
+}

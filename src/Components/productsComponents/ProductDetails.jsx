@@ -15,7 +15,7 @@ function ProductDetails() {
         <Link to="/products" className={`${open ? "" : "z-30"} absolute md:left-10 text-4xl text-[#f43c09a7] md:text-black md:hover:text-[#f43c09a7] duration-300 w-8 cursor-pointer `}>
           <IoMdArrowRoundBack />
         </Link>
-        
+
         <img src={prodImg} className='md:w-[35%] md:' alt="Product Image" />
 
         <section className='md:w-[50%] py-24 text-[#f43c09a7]'>

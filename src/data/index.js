@@ -1,9 +1,9 @@
 // DeTKQF+b*x&y6W-
 // Products Table
-// id 
+// id
 // Product Name
 // Product Image
 // Price
 // Desc
-// rate 
+// rate
 // State (Out of Stock || Numbers of Product)

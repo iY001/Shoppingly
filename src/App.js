@@ -4,6 +4,9 @@ import { Route, Routes } from 'react-router-dom'
 import Products from './Pages/Products'
 import Aboutus from './Pages/Aboutus'
 import ProductDetails from './Components/productsComponents/ProductDetails'
+import SignIn from './Pages/registration/SignIn'
+import SignUp from './Pages/registration/SignUp'
+
 
 function App() {
   return (
@@ -13,6 +16,8 @@ function App() {
       <Route path='/products' element={<Products/>}></Route>
       <Route path='/aboutus' element={<Aboutus/>}></Route>
       <Route path='/products/product-details/:id' element={<ProductDetails/>}></Route>
+      <Route path='/signin' element={<SignIn/>}></Route>
+      <Route path='/signup' element={<SignUp/>}></Route>
     </Routes>
     </>
   )

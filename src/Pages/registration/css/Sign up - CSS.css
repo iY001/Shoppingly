@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+}
+.layout-signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#edcaa2,#ffb766);
+    font-family: "Poppins";
+}
+.box-signup {
+    position: relative;
+    width: 480px;
+    height: 480px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 10px 10px 10px rgb(0,0,0,0.1);
+    overflow: hidden;
+    
+
+}
+.box-signup::before {
+    position: absolute;
+    content: " ";
+    top: -50%;
+    left: -50%;
+    width: 480px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,
+    #ffb766,#ff8d0a);
+    transform-origin: bottom right;
+    animation: move 6s linear infinite;
+}
+.box-signup::after {
+    position: absolute;
+    content: " ";
+    top: -50%;
+    left: -50%;
+    width: 480px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,
+    #ffb766,#ff8d0a);
+    transform-origin: bottom right;
+    animation: move 6s linear infinite;
+    animation-delay: -3s;
+}
+
+@keyframes move {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+.container-s {
+    position: absolute;
+    inset: 7px;
+    border-radius: 8px;
+    background: #fff;
+    z-index: 10;
+    padding: 18px 40px;
+    display: flex;
+    flex-direction: column;
+}
+.container-s h2 {
+    color:#ff8d0a;
+    text-align: center;
+
+}
+.inputbox {
+    position: relative;
+    margin-top: 35px;
+
+}
+.inputbox input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color:rgb(255, 255, 255);
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    z-index: 10;
+
+}
+.inputbox span {
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    font-size: 1em;
+    color:rgb(129, 125, 129);
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+
+}
+.inputbox input:valid ~ span,
+.inputbox input:focus ~ span {
+    color:#ff8d0a;
+    transform: translateY(-34px);
+    font-size: 0.75em;
+}
+.inputbox line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color:#ff8d0a;
+    transition: 0.5s;
+}
+.inputbox input:valid ~ line,
+.inputbox input:focus ~ line {
+    height: 48px;
+    border-radius: 4px;
+
+}
+.links {
+    display: flex;
+    justify-content: end;
+}
+.links a {
+    text-decoration: none;
+    margin: 10px 0px;
+    font-size: 0.80em;
+    color: rgb(129, 125, 129);
+
+
+}
+.links a:hover,
+.links a:nth-child(2) {
+    color: #ff8d0a;
+}
+
+input[type='submit'] {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: #ff8d0a;
+    padding: 11px 25px;
+    width: 100px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    
+}

@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 function Navbar(props) {
-    
+
     const [links, setLinks] = useState([
         {
             page: "Home",
@@ -48,12 +49,12 @@ function Navbar(props) {
                                     </li>
                                 );
                             })}
-                            <button className="md:bg-[#f0f0f0] md:px-[1.2rem] md:py-2 md:rounded-3xl hover:text-[#F43A09] font-medium  md:transition-all">
+                            <Link to={'/signup'} className="md:bg-[#f0f0f0] md:px-[1.2rem] md:py-2 md:rounded-3xl hover:text-[#F43A09] font-medium  md:transition-all">
                                 Sign Up
-                            </button>
-                            <button className="md:bg-[#f0f0f0] md:px-[1.2rem] md:py-2 md:rounded-3xl hover:text-[#F43A09] font-medium  md:transition-all">
+                            </Link>
+                            <Link to={'/signin'} className="md:bg-[#f0f0f0] md:px-[1.2rem] md:py-2 md:rounded-3xl hover:text-[#F43A09] font-medium  md:transition-all">
                                 Sign In
-                            </button>
+                            </Link>
                             {!props.open && (
                                 <button className="bg-white w-100 md:bg-[#F43A09] md:text-white md:text-2xl md:px-[0.4rem] md:py-[0.2rem] md:rounded-xl md:transition-all">
                                     <ion-icon name="cart-outline"></ion-icon>

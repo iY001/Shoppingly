@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import Navbar from './Navbar'
 import prodImg from '../../images/asus-tuf-gaming-f15.png'
 import Footer from '../Footer'
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { Link } from 'react-router-dom';
+import Navbar from '../Navbar'
 
 function ProductDetails() {
   const [open, setOpen] = useState(false);

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import Navbar from '../Components/productsComponents/Navbar'
 import SearchBar from '../Components/productsComponents/SearchBar'
 import ProductCard from '../Components/productsComponents/ProductCard';
 import Footer from '../Components/Footer';
+import Navbar from '../Components/Navbar';
 
 function Products() {
   const [open, setOpen] = useState(false);

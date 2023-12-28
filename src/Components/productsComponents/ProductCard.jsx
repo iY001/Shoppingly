@@ -5,7 +5,8 @@ function ProductCard(props) {
 
   return (
     <>
-      <Link to="/products/product-details/:id" className={`bg-[#f43c09a7] ${props.width} mx-6 my-6  shadow-lg md:m-10 md:rounded-lg md:mx-12 `}>
+    <div className={`bg-[#f43c09a7] ${props.width} mx-6 my-6  shadow-lg md:m-10 md:rounded-lg md:mx-12 `}> 
+      <Link to="/products/product-details/:id" >
         <img src={prod1} alt="" />
         <section className='bg-white w-full p-4'>
           <div className="flex mb-2 items-center">
@@ -28,10 +29,11 @@ function ProductCard(props) {
           <p className='md:text-2xl text-lg md:font-bold'>ASUS TUF GAMING F15</p>
           <p className='md:text-2xl md:font-bold'>$774.00</p>
         </section>
+      </Link>
         <section className='md:py-5 md:flex md:justify-end'>
           <button className='bg-white md:w-auto w-full text-[#f43c09a7] border-t-2 border-t-gray-200 drop-shadow-md hover:text-[#f43a09] py-2 px-6 md:mx-4 text-lg font-bold'>ADD TO CART</button>
         </section>
-      </Link>
+    </div>
     </>
   )
 }

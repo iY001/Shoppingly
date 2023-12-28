@@ -18,22 +18,22 @@ function SignUp() {
             <div className="inputbox">
               <input type="email" required="required" />
               <span>Username</span>
-              <line />
+              <section className='line'></section>
             </div>
             <div className="inputbox">
               <input type="email" required="required" />
               <span>Email</span>
-              <line />
+              <section className='line'></section>
             </div>
             <div className="inputbox">
               <input type="password" required="required" />
               <span>Password</span>
-              <line />
+              <section className='line'></section>
             </div>
             <div className="links">
               <a href="/signin">Sign in</a> {/* TO LOGIN PAGE */}
             </div>
-            <input onclick="window.location.href = 'Sign in - Page.html' " type="submit" defaultValue="Login" style={{ marginTop: 30 }} />
+            <input type="submit" defaultValue="Login" style={{ marginTop: 30 }} />
           </div>
         </div>
 

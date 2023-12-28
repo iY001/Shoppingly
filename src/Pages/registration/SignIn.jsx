@@ -19,18 +19,18 @@ function SignIn() {
                         <div className="inputbox">
                             <input type="email" required="required" />
                             <span>Email</span>
-                            <line />
+                            <section className='line'></section>
                         </div>
                         <div className="inputbox">
                             <input type="password" required="required" />
                             <span>Password</span>
-                            <line />
+                            <section className='line'></section>
                         </div>
                         <div className="links flex flex-col">
                             <a href="#">Forget Password</a>
                             <a href="/signup" className='text-[#817D81]'>Sign Up</a> {/* TO REGISTER PAGE */}
                         </div>
-                        <input onclick="window.location.href= '/sign' " type="submit" defaultValue="Login" style={{ marginTop: 5 }} />
+                        <input type="submit" defaultValue="Login" style={{ marginTop: 5 }} />
                     </div>
                 </div>
             </div>

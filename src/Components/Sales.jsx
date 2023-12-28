@@ -5,7 +5,7 @@ function Sales() {
         <>
             <div className='z-0 md:relative container md:w-[70%] w-full md:mx-auto rounded-2xl mt-14 md:bg-[#E8F9FD] py-8 md:py-0 flex items-center md:justify-normal flex-col md:flex-row'>
                 <section className='basis-[40%] md:p-10 mb-10 md:mb-0'>
-                    <h4 className='text-[#F43A09] md:text-[4em] text-[2em] w-full md:w-60 md:font-[Anton] font-[Poppins] md:font-medium font-bold'>FREE DELIVERY ON FIRST ORDER</h4>
+                    <h4 className='text-[#F43A09] md:text-[4em] text-[2em] w-full md:w-60 md:font-[Anton] font-[Poppins] md:font-medium font-bold text-center md:text-left'>FREE DELIVERY ON FIRST ORDER</h4>
                 </section> {/* Sale */}
                 <section className='md:basis-1/4 w-full'>
                     <div className='bg-[#F43A09] py-6 md:py-14 md:px-6 text-white text-4xl font-bold text-center w-full'>

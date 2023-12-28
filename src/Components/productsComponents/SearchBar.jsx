@@ -12,7 +12,7 @@ function SearchBar() {
               <IoIosSearch className='cursor-pointer text-[#F43A09]'/>
               </svg>
             </div>
-            <input type="text" className="w-full max-w-[60%] bg-gray-200 pl-4 text-base font-semibold outline-0" placeholder id />
+            <input type="text" className="w-full max-w-[60%] bg-gray-200 pl-4 text-base font-semibold outline-0" placeholder="Search"/>
             <input type="button" defaultValue="Search" className="bg-[#c13c07] cursor-pointer p-2 rounded-tr-lg rounded-br-lg text-white font-semibold hover:bg-[#F43A09] transition-colors" />
           </div>
     {/* Search Bar - End */}

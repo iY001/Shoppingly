@@ -26,7 +26,7 @@ function Navbar() {
             </h2>
           </div>
           <nav>
-            <span class="bg-[#F4F4F4] md:bg-white text-[#F43A09] duration-500 text-3xl cursor-pointer mx-6 align-middle md:hidden block">
+            <span className="bg-[#F4F4F4] md:bg-white text-[#F43A09] duration-500 text-3xl cursor-pointer mx-6 align-middle md:hidden block">
               <ion-icon
                 onClick={() => setOpen(!open)}
                 name={open ? "close" : "menu"}
@@ -38,15 +38,15 @@ function Navbar() {
         top-[-400px] transition-all ease-in duration-500 ${open ? "top-[60px] opacity-100" : "top-[-80px] opacity-0"
                 } `}
             >
-              {links.map((link) => {
+              {links.map((link , id) => {
                 return (
-                  <li key={link}>
-                    <a
+                  <li key={id}>
+                    <Link
                       className="text-black font-medium hover:opacity-[0.7] hover:text-[#F43A09]"
-                      href={`${link.url}`}
+                      to={`${link.url}`}
                     >
                       {link.page}
-                    </a>
+                    </Link>
                   </li>
                 );
               })}

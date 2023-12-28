@@ -15,7 +15,7 @@ function Products() {
   return (
     <>
       <Navbar open={open} setOpen={setOpen} />
-      <div className={`w-full mt-6 relative ${open ? "z-0" : 'z-20'} mx-auto mb-24`}>
+      <div className={`w-full mt-6 relative ${open ? "z-[-1]" : 'z-10'} z-[0] mx-auto mb-24`}>
         <SearchBar />
         <div className='flex flex-wrap justify-center'>
           <ProductCard width={width}/>

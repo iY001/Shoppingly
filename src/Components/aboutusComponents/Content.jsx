@@ -7,13 +7,13 @@ function Content() {
         <>
             <div className='relative bg-gray-200 w-full h-screen flex md:flex-row-reverse items-center flex-col justify-between px-8 md:px-48 py-4'>
 
-                <img src={logo} className='object-fill md:h-80 h-full rounded-full' alt="Logo" />
+                <img src={logo} className='object-fill md:h-80 rounded-full' alt="Logo" />
 
-                <section className='my-16 md:w-[50%]'>
+                <section className='md:w-[50%]'>
                     <h1 className='font-bold md:text-4xl text-2xl my-2'>YOUSEF ABDELAZIZ ELHASANIN</h1>
-                    <p className='text-left text-xl my-8'>🎓 My journey into the world of web development began as a curious teenager, diving headfirst into the intricacies of HTML, CSS, and JavaScript. Over time, I honed my skills through formal education at We School, where I delved deeper into the realms of responsive design, UI/UX principles, and the latest web technologies.</p>
+                    <p className='text-left md:text-2xl text-base my-8'>🎓 My journey into the world of web development began as a curious teenager, diving headfirst into the intricacies of HTML, CSS, and JavaScript. Over time, I honed my skills through formal education at We School, where I delved deeper into the realms of responsive design, UI/UX principles, and the latest web technologies.</p>
                     <Link to={"https://github.com/iY001"} className='bg-[#f43c09a7] md:w-auto w-full text-gray-100 shadow-lg hover:text-white py-4 px-6 text-lg font-bold duration-200'>READ MORE</Link>
-                    <div className='flex mt-8 md:justify-start md:mt-8'>
+                    <div className='flex mt-8 md:justify-start md:mt-8 pb-4'>
                         <Link to={"https://www.facebook.com/profile.php?id=100089737206920"} target='_blank' className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                             <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
                                 <path fillRule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clipRule="evenodd" />

@@ -25,14 +25,16 @@ function Navbar(props) {
                         </h2>
                     </div>
                     <nav>
-                        <span className="bg-[#F4F4F4] md:bg-white text-[#F43A09] duration-500 text-3xl cursor-pointer mx-6 align-middle md:hidden block">
+                        <span className="bg-[#F4F4F4] md:bg-white text-[#F43A09] duration-500 text-3xl mx-6 align-middle md:hidden block">
                             <button className="mr-6">
-                            <ion-icon name="cart-outline"></ion-icon>
+                                <ion-icon name="cart-outline"></ion-icon>
                             </button>
-                            <ion-icon
-                                onClick={() => props.setOpen(!props.open)}
-                                name={props.open ? "close" : "menu"}
-                            ></ion-icon>
+                            <button>
+                                <ion-icon
+                                    onClick={() => props.setOpen(!props.open)}
+                                    name={props.open ? "close" : "menu"}
+                                ></ion-icon>
+                            </button>
                         </span>
                         <ul
                             className={`flex flex-col md:flex-row bg-[#F4F4F4] md:bg-white items-center text-[1.1rem] gap-[2em] md:flex md:items-center md:px-4 z-[-20] md:z-auto absolute md:static 

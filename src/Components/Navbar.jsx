@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import CartProduct from './CartProduct';
 import ShoppingCart from './ShoppingCart';
-
+import { useShoppingCart } from '../Context/CartContext';
 
 function Navbar({ open, setOpen }) {
     const [openSide, setOpenSide] = useState(false);
@@ -20,6 +20,8 @@ function Navbar({ open, setOpen }) {
         { page: 'About us', url: '/aboutus' },
     ];
 
+    const { cartItems, cartQuantity } = useShoppingCart()
+
     return (
         <>
             <div className="relative z-10 md:bg-white bg-[#F4F4F4]">
@@ -34,7 +36,7 @@ function Navbar({ open, setOpen }) {
                     {/* Mobile menu button */}
                     <nav>
                         <span className="bg-[#F4F4F4] md:bg-white text-[#F43A09] duration-500 text-3xl mx-6 align-middle md:hidden block">
-                            <ShoppingCart CartHandler={CartHandler} openSide={openSide} setOpenSide={setOpenSide} />
+                            <ShoppingCart CartHandler={CartHandler} openSide={openSide} cartQuantity={cartQuantity} setOpenSide={setOpenSide} cartItems={cartItems} />
                             <button onClick={() => setOpen(!open)}>
                                 <ion-icon name={open ? 'close' : 'menu'}></ion-icon>
                             </button>
@@ -64,33 +66,38 @@ function Navbar({ open, setOpen }) {
                                 Sign In
                             </Link>
                             {!open && (
-                                <button onClick={CartHandler} className="relative bg-white w-100 md:bg-[#F43A09] md:text-white md:text-2xl md:px-[0.4rem] md:py-[0.2rem] md:rounded-xl md:transition-all">
-                                    <div className='absolute text-xs font-bold top-[-8px] right-[-4px] bg-[#f0f0f0] text-black p-[3px] rounded-full'>
-                                        1
+                                <button onClick={CartHandler} className="relative bg-white w-100 md:bg-[#F43A09] md:text-white md:text-2xl text-center md:px-[0.4rem] md:py-[0.2rem] md:rounded-xl md:transition-all">
+                                    <div className='absolute text-xs font-bold top-[-8px] right-[-4px] bg-[#f0f0f0] text-black p-[3px] rounded-full duration-200'>
+                                    {cartQuantity ? cartQuantity : null}
                                     </div>
                                     <ion-icon name="cart-outline"></ion-icon>
                                 </button>
                             )}
                             {openSide && (
                                 <>
-                                    <div className="fixed inset-0 overflow-hidden z-50">
+                                    <div className="fixed inset-0 overflow-scroll z-50">
                                         {/* Overlay */}
                                         <div
                                             className="fixed inset-0 bg-black opacity-50 transition-opacity"
                                             onClick={CartHandler}
                                         ></div>
                                         {/* Sidebar */}
-                                        <div className="fixed inset-y-0 right-0 w-64 bg-gray-100 z-50 shadow-lg">
+                                        <div className="fixed inset-y-0 right-0 w-96 bg-gray-100 z-50 shadow-lg overflow-y-scroll">
                                             {/* Sidebar content */}
                                             <div className="p-4">
-                                                <h2 className="text-lg font-bold mb-4">CART</h2>
+                                                <h2 className="text-lg font-bold mb-4 text-[#F43A09]">CART</h2>
                                                 <button
                                                     className="fixed top-2 right-2 text-[#F43A09] p-2"
                                                     onClick={CartHandler}
                                                 >
                                                     <ion-icon name='close'></ion-icon>
                                                 </button>
-                                                <CartProduct />
+                                                {
+                                                    cartItems.map((cartItem) => (
+                                                        <CartProduct key={cartItem.id} id={cartItem.id} quantity={cartItem.quantity} />
+                                                    ))
+                                                }
+
                                             </div>
                                         </div>
                                     </div>

@@ -34,6 +34,9 @@ function Content() {
                         </Link>
                     </div>
                 </section>
+                <div className='md:absolute md:bottom-12 md:right-8 md:block hidden'>
+                <button className='bg-[#f43c09a7] md:w-auto w-full text-gray-100 shadow-lg hover:text-white py-4 px-6 text-lg font-bold duration-200 uppercase'>Give Us Your Feedback</button>
+                </div>
             </div>
         </>
     )

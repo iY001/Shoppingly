@@ -24,7 +24,7 @@ function Products() {
     setShowModal(!showModal)
     setTimeout(() => {
       setShowModal(false);
-    }, 1000); // Hide after 3 seconds
+    }, 1500); // Hide after 1.5 seconds
   }
   // const {ModalHandler , showModal , setShowModal} = useShoppingCart()
   console.log(showModal)

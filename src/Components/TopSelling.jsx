@@ -12,6 +12,13 @@ function TopSelling({products}) {
     setWidth('md:w-[240px] w-[140px]');
   }, []);
 
+  const [ showModal , setShowModal ] = useState(false)
+  const ModalHandler = ()=>{
+    setShowModal(!showModal)
+    setTimeout(() => {
+      setShowModal(false);
+    }, 1500); // Hide after 1.5 seconds
+  }
   return (
     <>
 
@@ -22,7 +29,7 @@ function TopSelling({products}) {
         <section className='flex w-full h-full justify-center md:flex-nowrap flex-wrap'>
           {/* <FaRegArrowAltCircleLeft className='hidden md:block text-3xl font-semibold mx-2 cursor-pointer' width={"180px"} color='#f43a09' /> */}
           {products.slice(0, 5).map((item) => (
-            <ProductCard key={item.id} width={width} prod={item} />
+            <ProductCard key={item.id} width={width} prod={item} ModalHandler={ModalHandler}/>
           ))}
           {/* <FaRegArrowAltCircleRight className='hidden md:block text-3xl font-semibold mx-2 cursor-pointer' width={"180px"} color='#f43a09' /> */}
         </section>

@@ -4,7 +4,7 @@ function ProductModal({showModal}) {
   return (
     <>
     <div
-      className={`fixed flex z-50 md:top-14 top-12 mt-8 md:mr-8 md:h-20 bg-white border border-gray-300 duration-700 transition-all ${
+      className={`fixed flex z-50 md:top-14 top-12 mt-8 md:mr-8 md:h-20 bg-white border border-gray-300 border-l-4 border-l-green-600 duration-700 transition-all ${
         showModal ? 'pointer-events-auto right-0' : ' pointer-events-none right-[-600px]'
       }`}
     >

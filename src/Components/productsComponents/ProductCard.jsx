@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useShoppingCart } from '../../Context/CartContext'
 
-function ProductCard({width , prod , ModalHandler , flagHandler , flag}) {
+function ProductCard({width , prod , ModalHandler }) {
   
 
   const { getItemsQuantity , addToCartHandler} = useShoppingCart()
@@ -41,7 +41,6 @@ function ProductCard({width , prod , ModalHandler , flagHandler , flag}) {
           <button onClick={()=> {
             addToCartHandler(prod.id)
             ModalHandler()
-            flagHandler()
             }} className='md:absolute md:bottom-4 bg-white md:w-auto w-full text-[#f43c09a7] border-t-2 border-t-gray-200 drop-shadow-md hover:text-[#f43a09] py-2 px-6  text-lg font-bold'>ADD TO CART</button>
         </section>
     </div>

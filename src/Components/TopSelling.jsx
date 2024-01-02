@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ProductCard from './productsComponents/ProductCard'
 import { FaFire } from "react-icons/fa6";
-import { FaRegArrowAltCircleLeft } from "react-icons/fa";
-import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 function TopSelling({products}) {

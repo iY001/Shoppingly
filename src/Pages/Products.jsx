@@ -19,8 +19,8 @@ function Products() {
   const { products } = DataFetching();
   console.log(products)
 
-  const [ showModal , setShowModal ] = useState(false)
-  const ModalHandler = ()=>{
+  const [showModal, setShowModal] = useState(false)
+  const ModalHandler = () => {
     setShowModal(!showModal)
     setTimeout(() => {
       setShowModal(false);
@@ -31,7 +31,7 @@ function Products() {
 
   // ------------------------------------------
   const [flag, setFlag] = useState(false);
-  const flagHandler = ()=>{
+  const flagHandler = () => {
     setFlag(!flag)
   }
   return (
@@ -40,12 +40,12 @@ function Products() {
       <div className={`w-full mt-6 relative ${open ? 'z-[-1]' : 'z-10'} z-[0] mx-auto mb-24`}>
         <div className='shadow-md '>
           {/* <Notification flag={flag}/> */}
-          <ProductModal showModal={showModal}/>
+          <ProductModal showModal={showModal} />
         </div>
         <SearchBar />
         <div className='flex flex-wrap justify-center'>
           {products.map((item) => (
-            <ProductCard key={item.id} width={width} prod={item} ModalHandler={ModalHandler} showModal={showModal} setShowModal={setShowModal} flagHandler={flagHandler} flag={flag}/>
+            <ProductCard key={item.id} width={width} prod={item} ModalHandler={ModalHandler} showModal={showModal} setShowModal={setShowModal} flagHandler={flagHandler} flag={flag} />
           ))}
         </div>
       </div>

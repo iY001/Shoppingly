@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-const Notification = ({flag}) => {
-    
+const Notification = ({ flag }) => {
+
     return (
         <div>
             <div role="alert" className={flag ? "sm:mr-6 mt-16 sm:mt-6 mb-6 sm:mb-0 xl:w-5/12 mx-auto absolute left-0 sm:left-auto right-0 sm:top-0 sm:w-6/12 md:w-3/5 justify-between w-11/12 bg-white  dark:bg-gray-800 shadow-lg rounded flex sm:flex-row flex-col transition duration-150 ease-in-out translate-show" : "translate-hide"}>

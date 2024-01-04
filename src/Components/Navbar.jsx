@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import CartProduct from './CartProduct';
 import ShoppingCart from './ShoppingCart';
 import { useShoppingCart } from '../Context/CartContext';
-
+import DataFetching from '../data/DataFetching';
 function Navbar({ open, setOpen }) {
     const [openSide, setOpenSide] = useState(false);
 
@@ -21,6 +21,7 @@ function Navbar({ open, setOpen }) {
     ];
 
     const { cartItems, cartQuantity } = useShoppingCart()
+    const { products } = DataFetching()
 
     return (
         <>
@@ -36,7 +37,7 @@ function Navbar({ open, setOpen }) {
                     {/* Mobile menu button */}
                     <nav>
                         <span className="bg-[#F4F4F4] md:bg-white text-[#F43A09] duration-500 text-3xl mx-6 align-middle md:hidden block">
-                            <ShoppingCart CartHandler={CartHandler} openSide={openSide} cartQuantity={cartQuantity} setOpenSide={setOpenSide} cartItems={cartItems} />
+                            <ShoppingCart CartHandler={CartHandler} openSide={openSide} cartQuantity={cartQuantity} setOpenSide={setOpenSide} cartItems={cartItems} products={products}/>
                             <button onClick={() => setOpen(!open)}>
                                 <ion-icon name={open ? 'close' : 'menu'}></ion-icon>
                             </button>
@@ -68,7 +69,7 @@ function Navbar({ open, setOpen }) {
                             {!open && (
                                 <button onClick={CartHandler} className="relative bg-white w-100 md:bg-[#F43A09] md:text-white md:text-2xl text-center md:px-[0.4rem] md:py-[0.2rem] md:rounded-xl md:transition-all">
                                     <div className='absolute text-xs font-bold top-[-8px] right-[-4px] bg-[#f0f0f0] text-black p-[3px] rounded-full duration-200'>
-                                    {cartQuantity ? cartQuantity : null}
+                                        {cartQuantity ? cartQuantity : null}
                                     </div>
                                     <ion-icon name="cart-outline"></ion-icon>
                                 </button>
@@ -98,6 +99,15 @@ function Navbar({ open, setOpen }) {
                                                     ))
                                                 }
 
+                                            </div>
+                                            <div className='fixed bottom-4 right-6'>
+                                                <p className='text-lg'>Subtotal : ${
+                                                            cartItems.reduce((total , cartItem)=> {
+                                                                const item = products.find((item)=> item.id === cartItem.id)
+                                                                return total + (item?.price || 0) * cartItem.quantity
+                                                            }, 0)
+                                                }</p>
+                                                <button className='md:bottom-4 w-full bg-[#f43c09a7] text-white md:text-gray-200 md:hover:text-white border-t-2 border-t-gray-200 drop-shadow-md py-2 px-6 text-lg font-bold'>CHECK OUT</button>
                                             </div>
                                         </div>
                                     </div>

@@ -63,6 +63,7 @@ const CartContextProvider = ({ children }) => {
     setShowModal(!showModal)
   }
 
+
   return (
     <CartContext.Provider
       value={{

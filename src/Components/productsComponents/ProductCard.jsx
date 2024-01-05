@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { useShoppingCart } from '../../Context/CartContext'
 
 function ProductCard({ width, prod, ModalHandler }) {
 
 
-  const { getItemsQuantity, addToCartHandler } = useShoppingCart()
-  const quantity = getItemsQuantity(prod.id)
+  const { addToCartHandler } = useShoppingCart()
+
   return (
     <>
       <div className={`md:relative bg-[#f43c09a7] md:w-1/8 ${width} my-6 mx-6 shadow-xl md:m-10 md:rounded-lg md:mx-12 `}>

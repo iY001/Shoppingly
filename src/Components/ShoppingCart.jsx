@@ -39,7 +39,8 @@ function ShoppingCart({ CartHandler, openSide, cartItems , cartQuantity , produc
                                 }
 
                             </div>
-                            <div className='fixed bottom-4 right-4'>
+                            {/* Checkout */}
+                            <div className='absolute bottom-4 right-4'>
                             <p className='text-lg text-black'>Subtotal : ${
                                                             cartItems.reduce((total , cartItem)=> {
                                                                 const item = products.find((item)=> item.id === cartItem.id)
@@ -48,6 +49,7 @@ function ShoppingCart({ CartHandler, openSide, cartItems , cartQuantity , produc
                                                 }</p>
                                 <button className='md:absolute md:bottom-4 md:w-auto w-full bg-[#f43c09a7] text-white md:text-gray-200 md:hover:text-white border-t-2 border-t-gray-200 drop-shadow-md py-2 px-6  text-lg font-bold'>CHECK OUT</button>
                             </div>
+                            {/* Overlay */}
                         </div>
                     </div>
                     {/* Button to toggle sidebar */}

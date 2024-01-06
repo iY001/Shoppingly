@@ -1,5 +1,4 @@
 import React from 'react'
-import './css/Sign up - CSS.css'
 import { Link } from 'react-router-dom'
 import { IoMdArrowRoundBack } from "react-icons/io";
 

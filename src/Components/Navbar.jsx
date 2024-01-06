@@ -86,7 +86,7 @@ function Navbar({ open, setOpen }) {
                                         <div className="fixed inset-y-0 right-0 w-96 bg-gray-100 z-50 shadow-lg overflow-y-scroll">
                                             {/* Sidebar content */}
                                             <div className="p-4">
-                                                <h2 className="text-lg font-bold mb-4 text-[#F43A09]">SHOPPING CART</h2>
+                                                <h2 className="text-lg font-bold mb-4 text-black">SHOPPING CART</h2>
                                                 <button
                                                     className="fixed top-2 right-2 text-[#F43A09] p-2"
                                                     onClick={CartHandler}

@@ -25,7 +25,7 @@ const Notification = ({ flag }) => {
                 </div>
             </div>
 
-            <style>
+            {/* <style>
                 {`
                 .translate-show{
                     transform : translateX(0%);
@@ -34,7 +34,7 @@ const Notification = ({ flag }) => {
                     transform : translateX(150%);
                 }
                 `}
-            </style>
+            </style> */}
         </div>
     );
 };

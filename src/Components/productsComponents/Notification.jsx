@@ -24,10 +24,6 @@ const Notification = ({ flag }) => {
                     </div>
                 </div>
             </div>
-
-
-
-
             {/* <style>
                 {`
                 .translate-show{

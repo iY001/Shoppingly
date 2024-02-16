@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom'
 function Content() {
     return (
         <>
-            <div className='relative bg-gray-200 w-full h-screen flex lg:flex-row-reverse items-center flex-col justify-between px-8 lg:px-48 py-4'>
+            <div className=' relative bg-gray-200 w-full h-screen flex lg:flex-row-reverse items-center flex-col justify-between px-8 lg:px-48 py-4'>
 
                 <img src={logo} className='object-fill lg:h-80 md:h-1/2 rounded-full' alt="Logo" />
 
-                <section className='lg:w-[50%]'>
+                <section className='lg:w-[50%] h-screen'>
                     <h1 className='font-bold md:text-4xl text-2xl my-2'>YOUSEF ABDELAZIZ ELHASANIN</h1>
                     <p className='text-left md:text-2xl text-base my-8'>🎓 My journey into the world of web development began as a curious teenager, diving headfirst into the intricacies of HTML, CSS, and JavaScript. Over time, I honed my skills through formal education at We School, where I delved deeper into the realms of responsive design, UI/UX principles, and the latest web technologies.</p>
                     <Link to={"https://github.com/iY001"} className='bg-[#f43c09a7] lg:w-auto w-full text-gray-100 shadow-lg hover:text-white py-4 px-6 text-lg font-bold duration-200'>READ MORE</Link>

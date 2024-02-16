@@ -1,14 +1,14 @@
 import React from 'react'
 import CartProduct from './CartProduct'
 
-function ShoppingCart({ CartHandler, openSide, cartItems , cartQuantity , products}) {
+function ShoppingCart({ CartHandler, openSide, cartItems, cartQuantity, products }) {
 
     return (
         <>
             <span className="relative mr-6">
                 <button onClick={CartHandler} >
                     <div className='absolute text-xs font-bold top-[-8px] right-[-12px] text-black p-[3px] rounded-full'>
-                    {cartQuantity ? cartQuantity : null}
+                        {cartQuantity ? cartQuantity : null}
                     </div>
                     <ion-icon name="cart-outline"></ion-icon>
                 </button>
@@ -41,13 +41,13 @@ function ShoppingCart({ CartHandler, openSide, cartItems , cartQuantity , produc
                             </div>
                             {/* Checkout */}
                             <div className='absolute bottom-4 right-4'>
-                            <p className='text-lg text-black'>Subtotal : ${
-                                                            cartItems.reduce((total , cartItem)=> {
-                                                                const item = products.find((item)=> item.id === cartItem.id)
-                                                                return total + (item?.price || 0) * cartItem.quantity
-                                                            }, 0)
-                                                }</p>
-                                <button className='md:absolute md:bottom-4 md:w-auto w-full bg-[#f43c09a7] text-white md:text-gray-200 md:hover:text-white border-t-2 border-t-gray-200 drop-shadow-md py-2 px-6  text-lg font-bold'>CHECK OUT</button>
+                                <p className='text-lg text-black'>Subtotal : ${
+                                    cartItems.reduce((total, cartItem) => {
+                                        const item = products.find((item) => item.id === cartItem.id)
+                                        return total + (item?.price || 0) * cartItem.quantity
+                                    }, 0)
+                                }</p>
+                                <button className='lg:absolute lg:bottom-4 md:w-auto w-full bg-[#f43c09a7] text-white md:text-gray-200 md:hover:text-white border-t-2 border-t-gray-200 drop-shadow-md py-2 px-6  text-lg font-bold'>CHECK OUT</button>
                             </div>
                             {/* Overlay */}
                         </div>

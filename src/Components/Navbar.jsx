@@ -4,6 +4,7 @@ import CartProduct from './CartProduct';
 import ShoppingCart from './ShoppingCart';
 import { useShoppingCart } from '../Context/CartContext';
 import DataFetching from '../data/DataFetching';
+
 function Navbar({ open, setOpen }) {
     const [openSide, setOpenSide] = useState(false);
 
@@ -14,6 +15,7 @@ function Navbar({ open, setOpen }) {
     useEffect(() => {
         setOpenSide(false)
     }, [])
+
     const links = [
         { page: 'Home', url: '/' },
         { page: 'Products', url: '/products' },
@@ -36,14 +38,14 @@ function Navbar({ open, setOpen }) {
                     </div>
                     {/* Mobile menu button */}
                     <nav>
-                        <span className="bg-[#F4F4F4] md:bg-white text-[#F43A09] duration-500 text-3xl mx-6 align-middle md:hidden block">
-                            <ShoppingCart CartHandler={CartHandler} openSide={openSide} cartQuantity={cartQuantity} setOpenSide={setOpenSide} cartItems={cartItems} products={products}/>
+                        <span className="bg-[#F4F4F4] md:bg-white text-[#F43A09] duration-500 text-3xl mx-6 align-middle lg:hidden block">
+                            <ShoppingCart CartHandler={CartHandler} openSide={openSide} cartQuantity={cartQuantity} setOpenSide={setOpenSide} cartItems={cartItems} products={products} />
                             <button onClick={() => setOpen(!open)}>
                                 <ion-icon name={open ? 'close' : 'menu'}></ion-icon>
                             </button>
                         </span>
                         {/* Links */}
-                        <ul className={`flex flex-col md:flex-row bg-[#F4F4F4] md:bg-white items-center text-[1.1rem] gap-[2em] md:flex md:items-center md:px-4 z-[-20] md:z-auto absolute md:static w-full md:w-auto left-0 py-6 md:py-0 pl-7 md:pl-0 opacity-0 md:opacity-100 top-[-400px] transition-all ease-in duration-500 ${open ? "top-[60px] opacity-100" : "top-[-80px] opacity-0"}`}>
+                        <ul className={`flex flex-col lg:flex-row bg-[#F4F4F4] md:bg-white items-center text-[1.1rem] gap-[2em] lg:flex lg:items-center lg:px-4 z-[-20] lg:z-auto absolute lg:static w-full lg:w-auto left-0 py-6 md:py-0 md:pl-0 opacity-0 lg:opacity-100 top-[-400px] transition-all ease-in duration-500 ${open ? "md:top-[82px] top-[60px] opacity-100" : "top-[-80px] opacity-0"}`}>
                             {links.map((link, id) => (
                                 <li key={id}>
                                     <Link
@@ -56,13 +58,13 @@ function Navbar({ open, setOpen }) {
                             ))}
                             <Link
                                 to="/signup"
-                                className="md:bg-[#f0f0f0] md:px-[1.2rem] md:py-2 md:rounded-3xl hover:text-[#F43A09] font-medium  md:transition-all"
+                                className="lg:bg-[#f0f0f0] lg:px-[1.2rem] lg:py-2 lg:rounded-3xl hover:text-[#F43A09] font-medium  md:transition-all"
                             >
                                 Sign Up
                             </Link>
                             <Link
                                 to="/signin"
-                                className="md:bg-[#f0f0f0] md:px-[1.2rem] md:py-2 md:rounded-3xl hover:text-[#F43A09] font-medium  md:transition-all"
+                                className="lg:bg-[#f0f0f0] lg:px-[1.2rem] lg:py-2 lg:rounded-3xl hover:text-[#F43A09] font-medium  md:transition-all"
                             >
                                 Sign In
                             </Link>
@@ -83,7 +85,7 @@ function Navbar({ open, setOpen }) {
                                             onClick={CartHandler}
                                         ></div>
                                         {/* Sidebar */}
-                                        <div className="fixed inset-y-0 right-0 w-96 bg-gray-100 z-50 shadow-lg overflow-y-scroll">
+                                        <div className="fixed inset-y-0 right-0 w-full md:w-96 bg-gray-100 z-50 shadow-lg overflow-y-scroll">
                                             {/* Sidebar content */}
                                             <div className="p-4">
                                                 <h2 className="text-lg mb-4 text-black">SHOPPING CART</h2>
@@ -98,21 +100,19 @@ function Navbar({ open, setOpen }) {
                                                         <CartProduct key={cartItem.id} id={cartItem.id} quantity={cartItem.quantity} />
                                                     ))
                                                 }
-
                                             </div>
                                             <div className='fixed bottom-4 right-6'>
                                                 <p className='text-lg'>Subtotal : ${
-                                                            cartItems.reduce((total , cartItem)=> {
-                                                                const item = products.find((item)=> item.id === cartItem.id)
-                                                                return total + (item?.price || 0) * cartItem.quantity
-                                                            }, 0)
+                                                    cartItems.reduce((total, cartItem) => {
+                                                        const item = products.find((item) => item.id === cartItem.id)
+                                                        return total + (item?.price || 0) * cartItem.quantity
+                                                    }, 0)
                                                 }</p>
                                                 <button className='md:bottom-4 w-full bg-[#f43c09a7] text-white md:text-gray-200 md:hover:text-white border-t-2 border-t-gray-200 drop-shadow-md py-2 px-6 text-lg font-bold'>CHECK OUT</button>
                                             </div>
                                         </div>
                                     </div>
                                     {/* Button to toggle sidebar */}
-
                                 </>
                             )}
                         </ul>
@@ -124,5 +124,3 @@ function Navbar({ open, setOpen }) {
 }
 
 export default Navbar;
-
-

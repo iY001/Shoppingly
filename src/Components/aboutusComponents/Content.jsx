@@ -5,15 +5,15 @@ import { Link } from 'react-router-dom'
 function Content() {
     return (
         <>
-            <div className='relative bg-gray-200 w-full h-screen flex md:flex-row-reverse items-center flex-col justify-between px-8 md:px-48 py-4'>
+            <div className='relative bg-gray-200 w-full h-screen flex lg:flex-row-reverse items-center flex-col justify-between px-8 lg:px-48 py-4'>
 
-                <img src={logo} className='object-fill md:h-80 rounded-full' alt="Logo" />
+                <img src={logo} className='object-fill lg:h-80 md:h-1/2 rounded-full' alt="Logo" />
 
-                <section className='md:w-[50%]'>
+                <section className='lg:w-[50%]'>
                     <h1 className='font-bold md:text-4xl text-2xl my-2'>YOUSEF ABDELAZIZ ELHASANIN</h1>
                     <p className='text-left md:text-2xl text-base my-8'>🎓 My journey into the world of web development began as a curious teenager, diving headfirst into the intricacies of HTML, CSS, and JavaScript. Over time, I honed my skills through formal education at We School, where I delved deeper into the realms of responsive design, UI/UX principles, and the latest web technologies.</p>
-                    <Link to={"https://github.com/iY001"} className='bg-[#f43c09a7] md:w-auto w-full text-gray-100 shadow-lg hover:text-white py-4 px-6 text-lg font-bold duration-200'>READ MORE</Link>
-                    <div className='flex mt-8 md:justify-start md:mt-8 pb-4'>
+                    <Link to={"https://github.com/iY001"} className='bg-[#f43c09a7] lg:w-auto w-full text-gray-100 shadow-lg hover:text-white py-4 px-6 text-lg font-bold duration-200'>READ MORE</Link>
+                    <div className='flex mt-8 lg:justify-start md:mt-8 pb-4'>
                         <Link to={"https://www.facebook.com/profile.php?id=100089737206920"} target='_blank' className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                             <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
                                 <path fillRule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clipRule="evenodd" />
@@ -34,8 +34,8 @@ function Content() {
                         </Link>
                     </div>
                 </section>
-                <div className='md:absolute md:bottom-12 md:right-8 md:block hidden'>
-                <button className='bg-[#f43c09a7] md:w-auto w-full text-gray-100 shadow-lg hover:text-white py-4 px-6 text-lg font-bold duration-200 uppercase'>Give Us Your Feedback</button>
+                <div className='lg:absolute lg:bottom-12 lg:right-8 lg:block hidden'>
+                    <button className='bg-[#f43c09a7] lg:w-auto w-full text-gray-100 shadow-lg hover:text-white py-4 px-6 text-lg font-bold duration-200 uppercase'>Give Us Your Feedback</button>
                 </div>
             </div>
         </>

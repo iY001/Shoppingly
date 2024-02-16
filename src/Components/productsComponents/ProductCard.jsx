@@ -37,11 +37,11 @@ function ProductCard({ width, prod, ModalHandler }) {
             <p className='md:text-lg md:font-bold'>${prod.price}</p>
           </section>
         </Link>
-        <section className='md:py-4 md:px-4 md:flex md:justify-end'>
+        <section className=' lg:flex lg:justify-end'>
           <button onClick={() => {
             addToCartHandler(prod.id)
             ModalHandler()
-          }} className='md:absolute md:bottom-4 bg-white md:w-auto w-full text-[#f43c09a7] border-t-2 border-t-gray-200 drop-shadow-md hover:text-[#f43a09] py-2 px-6  text-lg font-bold'>ADD TO CART</button>
+          }} className=' lg:bottom-4 lg:mt-4 lg:mr-4  bg-white lg:w-auto w-full text-[#f43c09a7] border-t-2 border-t-gray-200 drop-shadow-md hover:text-[#f43a09] lg:py-2  md:py-4 py-2 px-6  text-lg font-bold'>ADD TO CART</button>
         </section>
       </div>
     </>
